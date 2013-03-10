@@ -1,0 +1,122 @@
+/* 
+  Localizable.strings
+  XDUIKitFramework
+
+  Created by admin on 12-8-9.
+  Copyright (c) 2012年 __MyCompany__. All rights reserved.
+*/
+
+"%d hours ago" = "%1$d時間前";
+
+"%d minutes ago" = "%1$d分前";
+
+"%d of %d" = "%1$d/%2$d";
+
+"%d seconds ago" = "%1$d秒前";
+
+"%dd" = "%1$d日";
+
+"%dh" = "%1$d時間";
+
+"%dm" = "%1$d分";
+
+"<1m" = "1分未満";
+
+"about a minute ago" = "約1分前";
+
+"about an hour ago" = "約1時間前";
+
+"Alert" = "お知らせ";
+
+"Are you sure you want to cancel?" = "キャンセルしますか？";
+
+"Cancel" = "キャンセル";
+
+"Connection Error" = "接続エラー";
+
+"Connection Timed Out" = "接続タイムアウト";
+
+"Done" = "完了";
+
+"EEE h:mm a" = "EEE H:mm";
+
+"EEEE" = "EEEE";
+
+"EEEE, LLLL d, YYYY" = "YYYY年L月d日(EEE)";
+
+"Error" = "エラー";
+
+"h:mm a" = "H:mm";
+
+"just a moment ago" = "数秒前";
+
+"Last updated: %@" = "最終更新: %1$@";
+
+"Last updated: never" = "最終更新: なし ";
+
+"Load More Photos..." = "他の写真を読み込む...";
+
+"Loading..." = "読み込み中...";
+
+"M/d/yy" = "yyyy/M/d";
+
+"MMM d h:mm a" = "M月d日 H:mm";
+
+"MMMM" = "M月";
+
+"MMMM d" = "M月d日";
+
+"New Message" = "新しいメッセージ";
+
+"No" = "いいえ";
+
+"No Internet Connection" = "インターネット接続がありません";
+
+"No Photos" = "写真がありません";
+
+"Ok" = "OK";
+
+"OK" = "OK";
+
+"Open in Safari" = "サファリで開く";
+
+"Photo" = "写真";
+
+"Post" = "投稿";
+
+"Pull down to update..." = "ドラッグして更新...";
+
+"Release to update..." = "リリースして更新...";
+
+"Search" = "検索";
+
+"See All" = "すべて見る";
+
+"Send" = "送信";
+
+"Sending..." = "送信中…";
+
+"Showing %@ of %@ Photos" = "写真%1$@/%2$@枚を表示";
+
+"Showing %@ Photos" = "写真%1$@枚を表示";
+
+"Sorry, there was an error." = "エラーが発生しました。";
+
+"Subject:" = "件名:";
+
+"This photo set contains no photos." = "写真がありません。";
+
+"To:" = "宛先:";
+
+"Today" = "今日";
+
+"Unable to load this photo set." = "写真を読み込むことができません。";
+
+"Updating..." = "更新中...";
+
+"Yes" = "はい";
+
+"Yesterday" = "昨日";
+
+"yyyy" = "yyyy年";
+

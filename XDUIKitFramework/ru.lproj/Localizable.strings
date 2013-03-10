@@ -1,0 +1,121 @@
+/* 
+  Localizable.strings
+  XDUIKitFramework
+
+  Created by admin on 12-8-9.
+  Copyright (c) 2012年 __MyCompany__. All rights reserved.
+*/
+"%d hours ago" = "%1$d ч. назад";
+
+"%d minutes ago" = "%1$d мин. назад";
+
+"%d of %d" = "%1$d из %2$d";
+
+"%d seconds ago" = "%1$d сек. назад";
+
+"%dd" = "%1$dд";
+
+"%dh" = "%1$dч";
+
+"%dm" = "%1$dм";
+
+"<1m" = "<1м";
+
+"about a minute ago" = "около минуты назад";
+
+"about an hour ago" = "около часа назад";
+
+"Alert" = "Напоминание";
+
+"Are you sure you want to cancel?" = "Отменить?";
+
+"Cancel" = "Отмена";
+
+"Connection Error" = "Ошибка подключения";
+
+"Connection Timed Out" = "Время подключения истекло";
+
+"Done" = "Готово";
+
+"EEE h:mm a" = "EEE HH:mm";
+
+"EEEE" = "EEEE";
+
+"EEEE, LLLL d, YYYY" = "EEEE, d, LLLL, YYYY ";
+
+"Error" = "Ошибка";
+
+"h:mm a" = "HH:mm";
+
+"just a moment ago" = "минуту назад";
+
+"Last updated: %@" = "Последнее обновление: %1$@";
+
+"Last updated: never" = "Последнее обновление: нет";
+
+"Load More Photos..." = "Добавить больше фотографий...";
+
+"Loading..." = "Загрузка...";
+
+"M/d/yy" = "d/M/yy";
+
+"MMM d h:mm a" = "d MMM HH:mm";
+
+"MMMM" = "MMMM";
+
+"MMMM d" = "d MMMM";
+
+"New Message" = "Новое сообщение";
+
+"No" = "Нет";
+
+"No Internet Connection" = "Отсутствует подключение к Интернету ";
+
+"No Photos" = "Нет фотографий";
+
+"Ok" = "Ок";
+
+"OK" = "OK";
+
+"Open in Safari" = "Открыть Safari";
+
+"Photo" = "Фотографии";
+
+"Post" = "Опубликовать";
+
+"Pull down to update..." = "Для обновления перетащите вниз...";
+
+"Release to update..." = "Разблокируйте для обновления...";
+
+"Search" = "Поиск";
+
+"See All" = "Все";
+
+"Send" = "Отправить";
+
+"Sending..." = "Отправка...";
+
+"Showing %@ of %@ Photos" = "Фотографии %1$@ из %2$@";
+
+"Showing %@ Photos" = "Фотографии %1$@";
+
+"Sorry, there was an error." = "Извините, произошла ошибка.";
+
+"Subject:" = "Тема:";
+
+"This photo set contains no photos." = "В этом альбоме нет фотографий.";
+
+"To:" = "Кому:";
+
+"Today" = "Сегодня";
+
+"Unable to load this photo set." = "Не удается загрузить этот альбом.";
+
+"Updating..." = "Идет обновление...";
+
+"Yes" = "Да";
+
+"Yesterday" = "Вчера";
+
+"yyyy" = "yyyy";
+

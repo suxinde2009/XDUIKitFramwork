@@ -1,0 +1,129 @@
+/* 
+  Localizable.strings
+  XDUIKitFramework
+
+  Created by admin on 12-8-9.
+  Copyright (c) 2012年 __MyCompany__. All rights reserved.
+*/
+
+"%d hours ago" = "%d hours ago";
+
+"%d minutes ago" = "%d minutes ago";
+
+/* Current page in photo browser (1 of 10) */
+"%d of %d" = "%1$d of %2$d";
+
+"%d seconds ago" = "%d seconds ago";
+
+/* Date format: 3d */
+"%dd" = "%dd";
+
+/* Date format: 3h */
+"%dh" = "%dh";
+
+/* Date format: 50m */
+"%dm" = "%dm";
+
+/* Date format: less than one minute ago */
+"<1m" = "<1m";
+
+"Alert" = "Alert";
+
+"Are you sure you want to cancel?" = "Are you sure you want to cancel?";
+
+"Cancel" = "Cancel";
+
+"Connection Error" = "Connection Error";
+
+"Connection Timed Out" = "Connection Timed Out";
+
+"Done" = "Done";
+
+/* Date format: Mon 1:05 pm */
+"EEE h:mm a" = "EEE h:mm a";
+
+/* Date format: Monday */
+"EEEE" = "EEEE";
+
+/* Date format: Monday, July 27, 2009 */
+"EEEE, LLLL d, YYYY" = "EEEE, LLLL d, YYYY";
+
+"Error" = "Error";
+
+"Load More Photos..." = "Load More Photos...";
+
+"Loading..." = "Loading...";
+
+/* Date format: 7/27/09 */
+"M/d/yy" = "M/d/yy";
+
+/* Date format: Jul 27 1:05 pm */
+"MMM d h:mm a" = "MMM d h:mm a";
+
+/* Date format: July */
+"MMMM" = "MMMM";
+
+/* Date format: July 27 */
+"MMMM d" = "MMMM d";
+
+"New Message" = "New Message";
+
+"No" = "No";
+
+"No Internet Connection" = "No Internet Connection";
+
+"No Photos" = "No Photos";
+
+"OK" = "OK";
+
+"Ok" = "Ok";
+
+"Open in Safari" = "Open in Safari";
+
+/* Title for back button that returns to photo browser */
+"Photo" = "Photo";
+
+"Post" = "Post";
+
+"Search" = "Search";
+
+/* See all photo thumbnails */
+"See All" = "See All";
+
+"Send" = "Send";
+
+"Sending..." = "Sending...";
+
+"Showing %@ Photos" = "Showing %@ Photos";
+
+"Showing %@ of %@ Photos" = "Showing %1$@ of %2$@ Photos";
+
+"Sorry, there was an error." = "Sorry, there was an error.";
+
+"Subject:" = "Subject:";
+
+"This photo set contains no photos." = "This photo set contains no photos.";
+
+"To:" = "To:";
+
+"Today" = "Today";
+
+"Unable to load this photo set." = "Unable to load this photo set.";
+
+"Updating..." = "Updating...";
+
+"Yes" = "Yes";
+
+"Yesterday" = "Yesterday";
+
+"about a minute ago" = "about a minute ago";
+
+"about an hour ago" = "about an hour ago";
+
+/* Date format: 1:05 pm */
+"h:mm a" = "h:mm a";
+
+"just a moment ago" = "just a moment ago";
+
+/* Date format: 2009 */
+"yyyy" = "yyyy";

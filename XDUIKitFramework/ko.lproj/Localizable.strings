@@ -1,0 +1,122 @@
+/* 
+  Localizable.strings
+  XDUIKitFramework
+
+  Created by admin on 12-8-9.
+  Copyright (c) 2012年 __MyCompany__. All rights reserved.
+*/
+
+"%d hours ago" = "%1$d시간 전";
+
+"%d minutes ago" = "%1$d분 전";
+
+"%d of %d" = "%1$d / %2$d";
+
+"%d seconds ago" = "%1$d초 전";
+
+"%dd" = "%1$d일";
+
+"%dh" = "%1$d시";
+
+"%dm" = "%1$d분";
+
+"<1m" = "1분 미만";
+
+"about a minute ago" = "1분 전";
+
+"about an hour ago" = "1시간 전";
+
+"Alert" = "알림";
+
+"Are you sure you want to cancel?" = "정말 취소하시겠습니까?";
+
+"Cancel" = "취소";
+
+"Connection Error" = "커넥션 에러";
+
+"Connection Timed Out" = "커넥션 시간 초과";
+
+"Done" = "완료";
+
+"EEE h:mm a" = "EEE a h:mm";
+
+"EEEE" = "EEEE";
+
+"EEEE, LLLL d, YYYY" = "YYYY년 LLLL d일 EEEE";
+
+"Error" = "오류";
+
+"h:mm a" = "a h:mm";
+
+"just a moment ago" = "조금 전";
+
+"Last updated: %@" = "최근 업데이트: %1$@";
+
+"Last updated: never" = "최근 업데이트 없음";
+
+"Load More Photos..." = "사진 더 불러오기...";
+
+"Loading..." = "로딩 중...";
+
+"M/d/yy" = "yy/M/d";
+
+"MMM d h:mm a" = "MMM d일 a h:mm";
+
+"MMMM" = "MMMM";
+
+"MMMM d" = "MMMM d일";
+
+"New Message" = "새 메시지 쓰기";
+
+"No" = "아니오";
+
+"No Internet Connection" = "인터넷에 연결되어 있지 않습니다.";
+
+"No Photos" = "사진 없음";
+
+"Ok" = "확인";
+
+"OK" = "확인";
+
+"Open in Safari" = "Safari에서 열기";
+
+"Photo" = "사진 ";
+
+"Post" = "게시물";
+
+"Pull down to update..." = "업데이트하시려면 아래로 당기세요.";
+
+"Release to update..." = "업데이트하시려면 당겼다 놓으세요.";
+
+"Search" = "검색";
+
+"See All" = "전체 보기";
+
+"Send" = "보내기";
+
+"Sending..." = "전송 중...";
+
+"Showing %@ of %@ Photos" = "%1$@ / %2$@";
+
+"Showing %@ Photos" = "사진 %1$@장 보기";
+
+"Sorry, there was an error." = "죄송합니다. 에러가 발생했습니다.";
+
+"Subject:" = "제목:";
+
+"This photo set contains no photos." = "사진이 없습니다.";
+
+"To:" = "받는 사람:";
+
+"Today" = "오늘";
+
+"Unable to load this photo set." = "사진을 불러올 수 없습니다.";
+
+"Updating..." = "업데이트 중...";
+
+"Yes" = "예";
+
+"Yesterday" = "어제";
+
+"yyyy" = "yyyy년";
+

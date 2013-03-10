@@ -1,0 +1,122 @@
+/* 
+  Localizable.strings
+  XDUIKitFramework
+
+  Created by admin on 12-8-9.
+  Copyright (c) 2012年 __MyCompany__. All rights reserved.
+*/
+
+"%d hours ago" = "%1$d ore fa";
+
+"%d minutes ago" = "%1$d minuti fa";
+
+"%d of %d" = "%1$d di %2$d";
+
+"%d seconds ago" = "%1$d secondi fa";
+
+"%dd" = "%1$d giorni";
+
+"%dh" = "%1$d ore";
+
+"%dm" = "%1$d minuti";
+
+"<1m" = "<1 min.";
+
+"about a minute ago" = "circa un minuto fa";
+
+"about an hour ago" = "circa un'ora fa";
+
+"Alert" = "Avviso";
+
+"Are you sure you want to cancel?" = "Annullare l'operazione?";
+
+"Cancel" = "Annulla";
+
+"Connection Error" = "Errore di connessione";
+
+"Connection Timed Out" = "Connessione scaduta";
+
+"Done" = "Fine";
+
+"EEE h:mm a" = "EEE HH:mm";
+
+"EEEE" = "EEEE";
+
+"EEEE, LLLL d, YYYY" = "EEEE d LLLL YYYY";
+
+"Error" = "Errore";
+
+"h:mm a" = "HH:mm";
+
+"just a moment ago" = "un attimo fa";
+
+"Last updated: %@" = "Ultimo aggiornamento: %1$@";
+
+"Last updated: never" = "Ultimo aggiornamento: mai";
+
+"Load More Photos..." = "Carica altre foto...";
+
+"Loading..." = "Caricamento...";
+
+"M/d/yy" = "d/M/yy";
+
+"MMM d h:mm a" = "d MMM HH:mm";
+
+"MMMM" = "MMMM";
+
+"MMMM d" = "d MMMM";
+
+"New Message" = "Nuovo messaggio";
+
+"No" = "No";
+
+"No Internet Connection" = "Connessione Internet assente";
+
+"No Photos" = "Nessuna foto";
+
+"Ok" = "Ok";
+
+"OK" = "OK";
+
+"Open in Safari" = "Apri con Safari";
+
+"Photo" = "Foto";
+
+"Post" = "Post";
+
+"Pull down to update..." = "Scorri verso il basso per aggiornare";
+
+"Release to update..." = "Rilascia per aggiornare...";
+
+"Search" = "Cerca";
+
+"See All" = "Mostra tutto";
+
+"Send" = "Invia";
+
+"Sending..." = "Invio in corso...";
+
+"Showing %@ of %@ Photos" = "Visualizzate %1$@ di %2$@ foto";
+
+"Showing %@ Photos" = "Visualizzate %1$@ foto";
+
+"Sorry, there was an error." = "Si è verificato un errore.";
+
+"Subject:" = "Oggetto:";
+
+"This photo set contains no photos." = "Nessuna foto in questo insieme di foto.";
+
+"To:" = "A:";
+
+"Today" = "Oggi";
+
+"Unable to load this photo set." = "Impossibile caricare questo insieme di foto.";
+
+"Updating..." = "Aggiornamento in corso...";
+
+"Yes" = "Sì";
+
+"Yesterday" = "Ieri";
+
+"yyyy" = "yyyy";
+
