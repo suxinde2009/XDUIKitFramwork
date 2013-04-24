@@ -15,6 +15,12 @@
 #define LogSubtitleRectSwitcher        0 // 1
 #define LogTextFieldsRectSwitcher      0 // 1
 #define LogButtonsRectSwitcher         0 // 1
+#define LogAccessoryViewRectSwitcher   0 // 1
+
+
+#ifndef kApplicationFrame
+    #define kApplicationFrame [[UIScreen mainScreen] applicationFrame]
+#endif
 
 bool isPad()
 {
@@ -45,9 +51,9 @@ bool isPad()
 @property (nonatomic, retain) UIFont *titleFont;
 @property (nonatomic, retain) UIFont *subtitleFont;
 @property (nonatomic, assign) NSInteger highlightedIndex;
-// 
+//
 - (UIColor *)shadowColor;
-- (UIColor *)translucentBlueColor; 
+- (UIColor *)translucentBlueColor;
 - (CGColorSpaceRef)genericRGBSpace;
 @end
 
@@ -88,9 +94,9 @@ XDDialogSynthesize(isShowing);
 - (id)initWithWindow:(UIWindow *)hostWindow
 {
     isShowing_ = FALSE;
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    CGRect insetFrame = CGRectIntegral(CGRectInset(appFrame, 20.0f, 20.0f));
-    insetFrame.size.height = 180.0f;
+    //CGRect insetFrame = CGRectIntegral(CGRectInset(kApplicationFrame, 20.0f, 20.0f));
+    //insetFrame.size.height = 180.0f;
+    CGRect insetFrame = CGRectIntegral(CGRectInset(CGRectMake(0.0f, 0.0f, 320.0f, 180.0f), 20.0f, 20.0f));
     
     self = [super initWithFrame:insetFrame];
     if(self){
@@ -116,37 +122,37 @@ XDDialogSynthesize(isShowing);
 ////////////////////////////////////////////////////////////////////////////////////
 //  Background color
 ///////////////////////////////////////////////////////////////////////////////////
-- (UIColor *)shadowColor; 
-{ 
-	static CGColorRef shadowColorRef = NULL; 
-	if (shadowColorRef == NULL) 
-	{ 
-		CGFloat values[4] = {0.0, 0.0, 0.0, 0.5}; 
-		shadowColorRef = CGColorCreate([self genericRGBSpace], values); 
-	} 
+- (UIColor *)shadowColor
+{
+	static CGColorRef shadowColorRef = NULL;
+	if (shadowColorRef == NULL)
+	{
+		CGFloat values[4] = {0.0, 0.0, 0.0, 0.5};
+		shadowColorRef = CGColorCreate([self genericRGBSpace], values);
+	}
     UIColor *shadowColor = [UIColor colorWithCGColor:shadowColorRef];
-	return shadowColor; 
+	return shadowColor;
 }
-- (UIColor *)translucentBlueColor; 
-{ 
-	static CGColorRef translucentBlueRef = NULL; 
-	if (translucentBlueRef == NULL) 
-	{ 
-		CGFloat values[4] = {0.13, 0.24, 0.44, 0.7}; 
-		translucentBlueRef = CGColorCreate([self genericRGBSpace], values); 
-	} 
+- (UIColor *)translucentBlueColor
+{
+	static CGColorRef translucentBlueRef = NULL;
+	if (translucentBlueRef == NULL)
+	{
+		CGFloat values[4] = {0.13, 0.24, 0.44, 0.7};
+		translucentBlueRef = CGColorCreate([self genericRGBSpace], values);
+	}
     UIColor *translucentBlue = [UIColor colorWithCGColor:translucentBlueRef];
-	return translucentBlue; 
+	return translucentBlue;
 }
 
-- (CGColorSpaceRef)genericRGBSpace;
-{ 
-	static CGColorSpaceRef space = NULL; 
-	if (space == NULL) 
-	{ 
+- (CGColorSpaceRef)genericRGBSpace
+{
+	static CGColorSpaceRef space = NULL;
+	if (space == NULL)
+	{
 		space = CGColorSpaceCreateDeviceRGB();
-	} 
-	return space; 
+	}
+	return space;
 }
 
 - (void)dealloc
@@ -173,16 +179,17 @@ XDDialogSynthesize(isShowing);
         self.frame = frame;
     } completion:^(BOOL finished) {
         
-    }]; 
+    }];
 }
 
 - (void)keyboardWillShow:(NSNotification *)note
 {
     NSValue *value = [[note userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect frame = [value CGRectValue];
-    
     [self adjustToKeyboardBounds:frame];
 }
+
+
 
 - (void)keyboardWillHide:(NSNotification *)note
 {
@@ -191,9 +198,9 @@ XDDialogSynthesize(isShowing);
 
 - (CGRect)defaultDialogFrame
 {
-    CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
-    CGRect insetFrame = CGRectIntegral(CGRectInset(appFrame, 20.0f, 20.0f));
-    insetFrame.size.height = 180.0f;
+    //CGRect insetFrame = CGRectIntegral(CGRectInset(kApplicationFrame, 20.0f, 20.0f));
+    //insetFrame.size.height = 180.0f;
+    CGRect insetFrame = CGRectIntegral(CGRectInset(CGRectMake(0.0f, 0.0f, 320.0f, 180.0f), 20.0f, 20.0f));
     return insetFrame;
 }
 
@@ -287,8 +294,9 @@ XDDialogSynthesize(isShowing);
     // Accessory frame !Note: views are in the content view coordinate system
     self.accessoryView = [self makeAccessoryView];
     self.accessoryView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
-     NSLog(@"accessory View frame: %f %f %f %f", self.accessoryView.frame.origin.x,self.accessoryView.frame.origin.y,self.accessoryView.frame.size.width,self.accessoryView.frame.size.height);
-    
+#if LogAccessoryViewRectSwitcher
+    NSLog(@"accessory View frame: %f %f %f %f", self.accessoryView.frame.origin.x,self.accessoryView.frame.origin.y,self.accessoryView.frame.size.width,self.accessoryView.frame.size.height);
+#endif
     CGFloat accessoryHeight = 0.0f;
     CGFloat accessoryWidth = CGRectGetWidth(layoutFrame);
     CGFloat accessoryLeft = 0.0f;
@@ -405,7 +413,7 @@ XDDialogSynthesize(isShowing);
         [UIView transitionFromView:self.contentView
                             toView:newContentView
                           duration:animationDuration
-                           options:UIViewAnimationOptionTransitionCrossDissolve
+                           options:UIViewAnimationOptionTransitionNone //UIViewAnimationOptionTransitionCrossDissolve
                         completion:^(BOOL finished) {
                             self.contentView = newContentView;
                         }];
@@ -413,13 +421,16 @@ XDDialogSynthesize(isShowing);
         self.contentView = newContentView;
         [self addSubview:newContentView];
         [newContentView release];
+        
         // Don't animate frame adjust if there was no content before
         animationDuration = 0;
     }
     
     // Adjust frame size
     [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionLayoutSubviews animations:^{
-        CGRect dialogFrame = CGRectInset(layoutFrame, -kXDDialogFrameInset - kXDDialogPadding, -kXDDialogFrameInset - kXDDialogPadding);
+        CGRect dialogFrame = CGRectInset(layoutFrame,
+                                         -kXDDialogFrameInset - kXDDialogPadding,
+                                         -kXDDialogFrameInset - kXDDialogPadding);
         dialogFrame.origin.x = (CGRectGetWidth(self.hostWindow.bounds) - CGRectGetWidth(dialogFrame)) / 2.0;
         dialogFrame.origin.y = (CGRectGetHeight(self.hostWindow.bounds) - CGRectGetHeight(dialogFrame)) / 2.0;
         
@@ -466,10 +477,11 @@ XDDialogSynthesize(isShowing);
     field.returnKeyType = UIReturnKeyDone;
     field.placeholder = placeholder;
     field.secureTextEntry = secure;
-    field.font = [UIFont systemFontOfSize:kXDDialogTextFieldHeight - 8.0];
+    field.font = [UIFont systemFontOfSize:20.0f];
     field.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     field.textColor = [UIColor blackColor];
-    field.keyboardAppearance = UIKeyboardAppearanceAlert;
+    field.keyboardAppearance = UIKeyboardAppearanceDefault;
+    field.autocapitalizationType = UITextAutocapitalizationTypeNone;
     field.delegate = (id)self;
     
     [self.textFields addObject:field];
@@ -554,8 +566,8 @@ XDDialogSynthesize(isShowing);
 }
 
 - (void)hideAnimated:(BOOL)flag {
+    isShowing_ = FALSE;
     XDDialogAssertMQ();
-    
     XDDialogWindowOverlay *overlay = self.overlay;
     
     // Nothing to hide if it is not key window
@@ -576,20 +588,19 @@ XDDialogSynthesize(isShowing);
         // Rekey host window
         // https://github.com/eaigner/CODialog/issues/6
         //
-        [self.hostWindow makeKeyAndVisible];
         [self.hostWindow makeKeyWindow];
     }];
     
     // !Note: 不确定，用于保证弹框确实退出后执行对应的委托方法
-    /*
+    
     if(self.delegate && [self.delegate respondsToSelector:@selector(didDismissDialog:)]){
         double delayInSeconds = 0.5;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             [self.delegate didDismissDialog:self];
-        }); 
+        });
     }
-     */
+     
 }
 
 - (void)hideAnimated:(BOOL)flag afterDelay:(NSTimeInterval)delay {
@@ -615,8 +626,8 @@ XDDialogSynthesize(isShowing);
     // Gradient Declarations
     size_t num_locations = 2;
     CGFloat gradientLocations[] = {0, 1};
-    CGFloat components[12] = { 1.0, 1.0, 1.0, 0.75,  // Start color
-                               0.227, 0.310, 0.455, 0.8 }; // End color
+    CGFloat components[12] = { 1.0, 1.0, 1.0, 0.75,         // Start color
+                               0.227, 0.310, 0.455, 0.8 };  // End color
     CGGradientRef gradient2 = CGGradientCreateWithColorComponents(colorSpace, components, gradientLocations, num_locations);  
     
     
@@ -654,8 +665,14 @@ XDDialogSynthesize(isShowing);
     
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     [bezierPath moveToPoint:CGPointMake(mx, h1)];
-    [bezierPath addCurveToPoint:CGPointMake(mx + w2, h2) controlPoint1:CGPointMake(mx, h1) controlPoint2:CGPointMake(mx + w4, h2)];
-    [bezierPath addCurveToPoint:CGPointMake(mx + w, h1) controlPoint1:CGPointMake(mx + w2 + w4, h2) controlPoint2:CGPointMake(mx + w, h1)];
+    [bezierPath addCurveToPoint:CGPointMake(mx + w2, h2)
+                  controlPoint1:CGPointMake(mx, h1)
+                  controlPoint2:CGPointMake(mx + w4, h2)];
+    
+    [bezierPath addCurveToPoint:CGPointMake(mx + w, h1)
+                  controlPoint1:CGPointMake(mx + w2 + w4, h2)
+                  controlPoint2:CGPointMake(mx + w, h1)];
+    
     [bezierPath addCurveToPoint:CGPointMake(mx + w, my) controlPoint1:CGPointMake(mx + w, h1) controlPoint2:CGPointMake(mx + w, my)];
     [bezierPath addCurveToPoint:CGPointMake(mx, my) controlPoint1:CGPointMake(mx + w, my) controlPoint2:CGPointMake(mx, my)];
     [bezierPath addLineToPoint:CGPointMake(mx, h1)];
@@ -698,8 +715,8 @@ XDDialogSynthesize(isShowing);
     size_t num_locations = 3;
     CGFloat gradientLocations[] = {0, 0.5, 0.5, 1};
     CGFloat components[12] = { 1.0, 1.0, 1.0, 0.35,  // Start color
-                               1.0, 1.0, 1.0, 0.10,  // Mid colors
-		                       1.0, 1.0, 1.0, 0.0 }; // End color
+        1.0, 1.0, 1.0, 0.10,  // Mid colors
+        1.0, 1.0, 1.0, 0.0 }; // End color
     
     /*
      // Color declarations
@@ -709,8 +726,9 @@ XDDialogSynthesize(isShowing);
      */
     CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, components, gradientLocations, num_locations);
     
-    CGColorSpaceRelease(colorSpace);
     
+    
+    CGColorSpaceRelease(colorSpace);
     
     // Bottom shadow
     UIBezierPath *fillPath = [UIBezierPath bezierPathWithRoundedRect:buttonFrame cornerRadius:radius];
@@ -751,7 +769,7 @@ XDDialogSynthesize(isShowing);
                                 CGPointMake(CGRectGetMidX(buttonFrame), CGRectGetMinY(buttonFrame)),
                                 CGPointMake(CGRectGetMidX(buttonFrame), CGRectGetMaxY(buttonFrame)), 0);
     CGContextRestoreGState(ctx);
-    CGGradientRelease(gradient);	
+    CGGradientRelease(gradient);
     
     // Draw highlight or down state
     if (highlighted) {
@@ -811,7 +829,7 @@ XDDialogSynthesize(isShowing);
     }
 }
 
-- (void)drawSymbolInRect:(CGRect)rect { 
+- (void)drawSymbolInRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSaveGState(context);
     
@@ -876,14 +894,23 @@ XDDialogSynthesize(isShowing);
     // Rectangle Drawing
     UIBezierPath *rectanglePath = [UIBezierPath bezierPathWithRect: CGRectIntegral(rect)];
     CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, outerShadowOffset, outerShadowBlurRadius, outerShadow);
+    CGContextSetShadowWithColor(context,
+                                outerShadowOffset,
+                                outerShadowBlurRadius,
+                                outerShadow);
     [[UIColor whiteColor] setFill];
     [rectanglePath fill];
     
     // Rectangle Inner Shadow
-    CGRect rectangleBorderRect = CGRectInset([rectanglePath bounds], -innerShadowBlurRadius, -innerShadowBlurRadius);
-    rectangleBorderRect = CGRectOffset(rectangleBorderRect, -innerShadowOffset.width, -innerShadowOffset.height);
-    rectangleBorderRect = CGRectInset(CGRectUnion(rectangleBorderRect, [rectanglePath bounds]), -1, -1);
+    CGRect rectangleBorderRect = CGRectInset([rectanglePath bounds],
+                                             -innerShadowBlurRadius,
+                                             -innerShadowBlurRadius);
+    rectangleBorderRect = CGRectOffset(rectangleBorderRect,
+                                       -innerShadowOffset.width,
+                                       -innerShadowOffset.height);
+    rectangleBorderRect = CGRectInset(CGRectUnion(rectangleBorderRect, [rectanglePath bounds]),
+                                      -1,
+                                      -1);
     
     UIBezierPath* rectangleNegativePath = [UIBezierPath bezierPathWithRect: rectangleBorderRect];
     [rectangleNegativePath appendPath: rectanglePath];
@@ -977,15 +1004,26 @@ XDDialogSynthesize(dialog);
 	
 	CGFloat locations[2] = { 0.0, 1.0 };
 	CGFloat components[8] = { 0.0, 0.0, 0.0, 0.20,   // Start color
-                              0.0, 0.0, 0.0, 0.70 }; // End color
+        0.0, 0.0, 0.0, 0.70 }; // End color
 	CGColorSpaceRef rgbColorspace = CGColorSpaceCreateDeviceRGB();
 	
-	backgroundGradient = CGGradientCreateWithColorComponents (rgbColorspace, components, locations, num_locations);
+	backgroundGradient = CGGradientCreateWithColorComponents (rgbColorspace,
+                                                              components, 
+                                                              locations,
+                                                              num_locations);
 	
-	CGPoint centerPoint = CGPointMake(CGRectGetMidX(currentBounds), CGRectGetMidY(currentBounds));
-	CGContextDrawRadialGradient (context, backgroundGradient, centerPoint, 10.0, centerPoint, CGRectGetMidY(rect), kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
+	CGPoint centerPoint = CGPointMake(CGRectGetMidX(currentBounds),
+                                      CGRectGetMidY(currentBounds));
+
+    CGContextDrawRadialGradient (context,
+                                 backgroundGradient,
+                                 centerPoint,
+                                 10.0,
+                                 centerPoint,
+                                 CGRectGetMidY(rect),
+                                 kCGGradientDrawsBeforeStartLocation | kCGGradientDrawsAfterEndLocation);
     
-	CGGradientRelease(backgroundGradient);	
+	CGGradientRelease(backgroundGradient);
     CGColorSpaceRelease(rgbColorspace);
 }
 
