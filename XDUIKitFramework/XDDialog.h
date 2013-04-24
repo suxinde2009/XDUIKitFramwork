@@ -12,12 +12,17 @@
 //
 //  ReWriten By     :  XD.Su
 //
-//  Rewrite reason  :  The original code writen by Erik Aigner using ARC, that means the code 
-//                     can only run on the device with iOS 5.0 and above. So I rewrite it to 
-//                     compatible for iOS 4.0, and I plan to add a delegate to this class to 
-//                     make it a UIAlertView-like for convenience. 
+//  Rewrite reason  :  The original code writen by Erik Aigner using ARC, that means the code
+//                     can only run on the device with iOS 5.0 and above. So I rewrite it to
+//                     compatible for iOS 4.0, and I plan to add a delegate to this class to
+//                     make it a UIAlertView-like for convenience.
 //
-//  Last updated    :  0813, 2012
+//                  ** ----------------------- 2013.03.26 -----------------------------------
+//                     Fix the bug when poping the dialog in a modal view, when hiding the
+//                     dialog, the modal view will be poped too.
+//                  ** ----------------------------------------------------------------------
+//
+//  Last updated    :  0326, 2013
 //
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -106,6 +111,6 @@ typedef enum {
 
 - (void)willPresentDialog:(XDDialog *)dialog;
 - (void)didPresentDialog:(XDDialog *)dialog;
-//- (void)didDismissDialog:(XDDialog *)dialog;
+- (void)didDismissDialog:(XDDialog *)dialog;
 
 @end
