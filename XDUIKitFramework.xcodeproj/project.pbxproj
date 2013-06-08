@@ -100,6 +100,24 @@
 		18F0FFE7160093B500863082 /* TestFXLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F0FFE5160093B400863082 /* TestFXLabelViewController.xib */; };
 		18F8C82A15DE1128008EC39A /* TestToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C82815DE1127008EC39A /* TestToastViewController.m */; };
 		18F8C82B15DE1128008EC39A /* TestToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C82915DE1128008EC39A /* TestToastViewController.xib */; };
+		1FBDB17D17638B320089BE2E /* BKDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB17917638B320089BE2E /* BKDownload.h */; };
+		1FBDB17E17638B320089BE2E /* BKDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB17A17638B320089BE2E /* BKDownload.m */; };
+		1FBDB17F17638B320089BE2E /* BKDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB17A17638B320089BE2E /* BKDownload.m */; };
+		1FBDB18017638B320089BE2E /* BKTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB17B17638B320089BE2E /* BKTimer.h */; };
+		1FBDB18117638B320089BE2E /* BKTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB17C17638B320089BE2E /* BKTimer.m */; };
+		1FBDB18217638B320089BE2E /* BKTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB17C17638B320089BE2E /* BKTimer.m */; };
+		1FBDB18517638B600089BE2E /* NSDate+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB18317638B600089BE2E /* NSDate+Utils.h */; };
+		1FBDB18617638B600089BE2E /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB18417638B600089BE2E /* NSDate+Utils.m */; };
+		1FBDB18717638B600089BE2E /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB18417638B600089BE2E /* NSDate+Utils.m */; };
+		1FBDB18A17638B6E0089BE2E /* NSObject+PropertyList.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB18817638B6E0089BE2E /* NSObject+PropertyList.h */; };
+		1FBDB18B17638B6E0089BE2E /* NSObject+PropertyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB18917638B6E0089BE2E /* NSObject+PropertyList.m */; };
+		1FBDB18C17638B6E0089BE2E /* NSObject+PropertyList.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB18917638B6E0089BE2E /* NSObject+PropertyList.m */; };
+		1FBDB18F17638B970089BE2E /* UITableDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB18D17638B970089BE2E /* UITableDialog.h */; };
+		1FBDB19017638B970089BE2E /* UITableDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB18E17638B970089BE2E /* UITableDialog.m */; };
+		1FBDB19117638B970089BE2E /* UITableDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB18E17638B970089BE2E /* UITableDialog.m */; };
+		1FBDB19417638BC20089BE2E /* UIDevice+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB19217638BC20089BE2E /* UIDevice+Utils.h */; };
+		1FBDB19517638BC20089BE2E /* UIDevice+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB19317638BC20089BE2E /* UIDevice+Utils.m */; };
+		1FBDB19617638BC20089BE2E /* UIDevice+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB19317638BC20089BE2E /* UIDevice+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -224,6 +242,18 @@
 		18F8C82715DE1127008EC39A /* TestToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestToastViewController.h; sourceTree = "<group>"; };
 		18F8C82815DE1127008EC39A /* TestToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestToastViewController.m; sourceTree = "<group>"; };
 		18F8C82915DE1128008EC39A /* TestToastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestToastViewController.xib; sourceTree = "<group>"; };
+		1FBDB17917638B320089BE2E /* BKDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDownload.h; sourceTree = "<group>"; };
+		1FBDB17A17638B320089BE2E /* BKDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDownload.m; sourceTree = "<group>"; };
+		1FBDB17B17638B320089BE2E /* BKTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTimer.h; sourceTree = "<group>"; };
+		1FBDB17C17638B320089BE2E /* BKTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTimer.m; sourceTree = "<group>"; };
+		1FBDB18317638B600089BE2E /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utils.h"; sourceTree = "<group>"; };
+		1FBDB18417638B600089BE2E /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utils.m"; sourceTree = "<group>"; };
+		1FBDB18817638B6E0089BE2E /* NSObject+PropertyList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyList.h"; sourceTree = "<group>"; };
+		1FBDB18917638B6E0089BE2E /* NSObject+PropertyList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyList.m"; sourceTree = "<group>"; };
+		1FBDB18D17638B970089BE2E /* UITableDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableDialog.h; sourceTree = "<group>"; };
+		1FBDB18E17638B970089BE2E /* UITableDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableDialog.m; sourceTree = "<group>"; };
+		1FBDB19217638BC20089BE2E /* UIDevice+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Utils.h"; sourceTree = "<group>"; };
+		1FBDB19317638BC20089BE2E /* UIDevice+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Utils.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,6 +363,8 @@
 		187DCE9415D8D6A500838FA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FBDB18D17638B970089BE2E /* UITableDialog.h */,
+				1FBDB18E17638B970089BE2E /* UITableDialog.m */,
 				1878F43715D4F1C000E4E6FC /* XDToast.h */,
 				1878F43815D4F1C000E4E6FC /* XDToast.m */,
 				187DCDE015D8885D00838FA6 /* XDDialog.h */,
@@ -458,6 +490,10 @@
 		18E2A71C15D39B820072B4D1 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				1FBDB17917638B320089BE2E /* BKDownload.h */,
+				1FBDB17A17638B320089BE2E /* BKDownload.m */,
+				1FBDB17B17638B320089BE2E /* BKTimer.h */,
+				1FBDB17C17638B320089BE2E /* BKTimer.m */,
 				1880BE2E15F0582C0069C8BC /* JSONKit */,
 				18E2A72515D3A7080072B4D1 /* Additions */,
 				1878F42E15D4E26300E4E6FC /* Markup Stripper */,
@@ -482,6 +518,12 @@
 		18E2A72515D3A7080072B4D1 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
+				1FBDB19217638BC20089BE2E /* UIDevice+Utils.h */,
+				1FBDB19317638BC20089BE2E /* UIDevice+Utils.m */,
+				1FBDB18817638B6E0089BE2E /* NSObject+PropertyList.h */,
+				1FBDB18917638B6E0089BE2E /* NSObject+PropertyList.m */,
+				1FBDB18317638B600089BE2E /* NSDate+Utils.h */,
+				1FBDB18417638B600089BE2E /* NSDate+Utils.m */,
 				18E2A72E15D3A7E10072B4D1 /* NSObject+XDCategory.h */,
 				18E2A72F15D3A7E10072B4D1 /* NSObject+XDCategory.m */,
 				18E2A72A15D3A7520072B4D1 /* NSArray+XDCategory.h */,
@@ -546,6 +588,12 @@
 				18132FF316D49D4000DE7EA0 /* UIView+ViewHierarchy.h in Headers */,
 				18132FF816D4A46E00DE7EA0 /* UIView+LayerEffects.h in Headers */,
 				1813300116D4A5FA00DE7EA0 /* XDGradientView.h in Headers */,
+				1FBDB17D17638B320089BE2E /* BKDownload.h in Headers */,
+				1FBDB18017638B320089BE2E /* BKTimer.h in Headers */,
+				1FBDB18517638B600089BE2E /* NSDate+Utils.h in Headers */,
+				1FBDB18A17638B6E0089BE2E /* NSObject+PropertyList.h in Headers */,
+				1FBDB18F17638B970089BE2E /* UITableDialog.h in Headers */,
+				1FBDB19417638BC20089BE2E /* UIDevice+Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +717,12 @@
 				18132FF516D49D4000DE7EA0 /* UIView+ViewHierarchy.m in Sources */,
 				18132FFA16D4A46E00DE7EA0 /* UIView+LayerEffects.m in Sources */,
 				1813300316D4A5FA00DE7EA0 /* XDGradientView.m in Sources */,
+				1FBDB17F17638B320089BE2E /* BKDownload.m in Sources */,
+				1FBDB18217638B320089BE2E /* BKTimer.m in Sources */,
+				1FBDB18717638B600089BE2E /* NSDate+Utils.m in Sources */,
+				1FBDB18C17638B6E0089BE2E /* NSObject+PropertyList.m in Sources */,
+				1FBDB19117638B970089BE2E /* UITableDialog.m in Sources */,
+				1FBDB19617638BC20089BE2E /* UIDevice+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +760,12 @@
 				18132FF416D49D4000DE7EA0 /* UIView+ViewHierarchy.m in Sources */,
 				18132FF916D4A46E00DE7EA0 /* UIView+LayerEffects.m in Sources */,
 				1813300216D4A5FA00DE7EA0 /* XDGradientView.m in Sources */,
+				1FBDB17E17638B320089BE2E /* BKDownload.m in Sources */,
+				1FBDB18117638B320089BE2E /* BKTimer.m in Sources */,
+				1FBDB18617638B600089BE2E /* NSDate+Utils.m in Sources */,
+				1FBDB18B17638B6E0089BE2E /* NSObject+PropertyList.m in Sources */,
+				1FBDB19017638B970089BE2E /* UITableDialog.m in Sources */,
+				1FBDB19517638BC20089BE2E /* UIDevice+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
