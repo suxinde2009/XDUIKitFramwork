@@ -192,7 +192,7 @@
 #define RANDOM_SEED() srandom(time(NULL))
 #define RANDOM_INT(__MIN__,__MAX__) ((__MIN__)+random()%((__MAX__+1)-(__MIN__)))
 
-@implementation NSString (Extended)
+@implementation NSString (Utils)
 + (BOOL)isNullOrEmpty:(NSString *)string
 {
 	if(string==nil) return TRUE;
