@@ -107,6 +107,14 @@
 
 @interface NSString (Utils)
 
+- (CGSize)wrapString:(CGFloat)width
+            fontSize:(float)fontSize
+           isDefault:(BOOL)isDefault;
+
+- (float)wrapStringHeight:(CGFloat)width
+                 fontSize:(float)fontSize
+                isDefault:(BOOL)isDefault;
+
 + (BOOL)isNullOrEmpty:(NSString *)string;
 - (NSString *)decodeXML;
 - (NSString *)encodeXML;  
