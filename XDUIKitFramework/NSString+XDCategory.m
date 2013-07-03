@@ -13,6 +13,36 @@
 #import "NSData+XDCategory.h"
 #import "XDMarkupStripper.h"
 
+#ifndef __MY_MACROS_H___
+#define __MY_MACROS_H___
+    #ifdef __IPHONE_6_0
+        #define kTextAlignmentLeft NSTextAlignmentLeft
+        #define kTextAlignmentCenter NSTextAlignmentCenter
+        #define kTextAlignmentRight NSTextAlignmentRight
+        #define kLineBreakModeCharaterWrap NSLineBreakByCharWrapping
+        #define kLineBreakModeWordWrap NSLineBreakByWordWrapping
+        #define kLineBreakModeClip NSLineBreakByClipping
+        #define kLineBreakModeTruncatingHead NSLineBreakByTruncatingHead
+        #define kLineBreakModeTruncatingMiddle NSLineBreakByTruncatingMiddle
+        #define kLineBreakModeTruncatingTail NSLineBreakByTruncatingTail
+    #else
+        #define kTextAlignmentLeft UITextAlignmentLeft
+        #define kTextAlignmentCenter UITextAlignmentCenter
+        #define kTextAlignmentRight UITextAlignmentRight
+        #define kLineBreakModeCharaterWrap UILineBreakModeCharacterWrap
+        #define kLineBreakModeWordWrap UILineBreakModeWordWrap
+        #define kLineBreakModeClip UILineBreakModeClip
+        #define kLineBreakModeTruncatingHead UILineBreakModeHeadTruncation
+        #define kLineBreakModeTruncatingMiddle UILineBreakModeMiddleTruncation
+        #define kLineBreakModeTruncatingTail UILineBreakModeTailTruncation
+    #endif
+
+    #define kMainScreenFrame [[UIScreen mainScreen] bounds]
+    #define kMainScreenWidth kMainScreenFrame.size.width
+    #define kMainScreenHeight kMainScreenFrame.size.height-20
+    #define kApplicationFrame [[UIScreen mainScreen] applicationFrame]
+#endif
+
 @implementation NSString (XDCategory)
 
 
@@ -193,6 +223,23 @@
 #define RANDOM_INT(__MIN__,__MAX__) ((__MIN__)+random()%((__MAX__+1)-(__MIN__)))
 
 @implementation NSString (Utils)
+
+- (CGSize)wrapString:(CGFloat)width
+            fontSize:(float)fontSize
+           isDefault:(BOOL)isDefault
+{
+    UIFont *font = isDefault? [UIFont systemFontOfSize:fontSize] : [UIFont boldSystemFontOfSize:fontSize];
+    CGSize size  = [self sizeWithFont:font constrainedToSize:CGSizeMake(width, MAXFLOAT) lineBreakMode:kLineBreakModeWordWrap];
+    return size;
+}
+
+- (float)wrapStringHeight:(CGFloat)width
+                 fontSize:(float)fontSize
+                isDefault:(BOOL)isDefault
+{
+    return [self wrapString:width fontSize:fontSize isDefault:isDefault].height;
+}
+
 + (BOOL)isNullOrEmpty:(NSString *)string
 {
 	if(string==nil) return TRUE;
