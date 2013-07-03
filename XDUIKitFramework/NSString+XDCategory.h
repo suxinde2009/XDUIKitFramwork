@@ -103,3 +103,32 @@
 - (BOOL) isEmail;
 
 @end
+
+
+@interface NSString (Utils)
+
++ (BOOL)isNullOrEmpty:(NSString *)string;
+- (NSString *)decodeXML;
+- (NSString *)encodeXML;  
+
++ (NSString *)htmlEncode:(NSString *)string;
++ (NSString *)htmlDecode:(NSString *)string;
+- (BOOL)startWith:(NSString *)s;
+
++ (BOOL)validateEmail:(NSString *)emailAddress;
+- (CGSize)getWrapSize:(CGFloat)fontSize width:(CGFloat)width isDefault:(BOOL)isDefault;
++(NSString *)dateString;
+
+- (NSString *) md5HexDigest;
++ (NSString *)trim:(NSString *)string;
+
+- (NSString *)URLEncodedString; 
+- (NSString*)URLDecodedString;
+
++ (NSString *)reverseString:(NSString *)string;
+- (BOOL)isSubString:(NSString *)string;
+- (BOOL)isSubString:(NSString *)string options:(NSStringCompareOptions)mask;
+
+- (BOOL)caseInsensitiveSameTo:(NSString *)string;
+
+@end
