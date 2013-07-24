@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface UIView (autoresizing)
+@interface UIView (Autoresizing)
 //带margin的左中右层
 - (void) addSubviewLeft:(UIView *)leftView middleView:(UIView *)middleView rightView:(UIView *)rightView lefWidth:(CGFloat)lefWidth rightWidth:(CGFloat)rightWidth margin:(CGRect)marginFrame;
 //左中右层
