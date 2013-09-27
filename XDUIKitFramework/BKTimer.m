@@ -9,8 +9,8 @@
 #import "BKTimer.h"
 
 @interface BKTimer ()
-@property (nonatomic, strong) BKTimerCompletionBlock nonRepeatBlock;
-@property (nonatomic, strong) BKTimerRepeatingCompletionBlock repeatBlock;
+@property (nonatomic, retain) BKTimerCompletionBlock nonRepeatBlock;
+@property (nonatomic, retain) BKTimerRepeatingCompletionBlock repeatBlock;
 @property (nonatomic, assign) BOOL repeating;
 @property (nonatomic, retain) NSTimer *timer;
 @end

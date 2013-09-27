@@ -8,6 +8,8 @@
 
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 #import "XDCorePreprocessorMacros.h" // For __XDDEPRECATED_METHOD
 
 /**
@@ -107,13 +109,17 @@
 
 @interface NSString (Utils)
 
-- (CGSize)wrapString:(CGFloat)width
+- (CGSize)wrapString:(float)width
             fontSize:(float)fontSize
            isDefault:(BOOL)isDefault;
 
-- (float)wrapStringHeight:(CGFloat)width
+- (float)wrapStringHeight:(float)width
                  fontSize:(float)fontSize
                 isDefault:(BOOL)isDefault;
+
+- (CGSize)getWrapSize:(float)fontSize
+                width:(float)width
+            isDefault:(BOOL)isDefault;
 
 + (BOOL)isNullOrEmpty:(NSString *)string;
 - (NSString *)decodeXML;
@@ -124,7 +130,7 @@
 - (BOOL)startWith:(NSString *)s;
 
 + (BOOL)validateEmail:(NSString *)emailAddress;
-- (CGSize)getWrapSize:(CGFloat)fontSize width:(CGFloat)width isDefault:(BOOL)isDefault;
+
 +(NSString *)dateString;
 
 - (NSString *) md5HexDigest;

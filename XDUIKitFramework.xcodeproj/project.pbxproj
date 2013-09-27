@@ -100,6 +100,9 @@
 		18F0FFE7160093B500863082 /* TestFXLabelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F0FFE5160093B400863082 /* TestFXLabelViewController.xib */; };
 		18F8C82A15DE1128008EC39A /* TestToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C82815DE1127008EC39A /* TestToastViewController.m */; };
 		18F8C82B15DE1128008EC39A /* TestToastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F8C82915DE1128008EC39A /* TestToastViewController.xib */; };
+		1F3186B017F57A9400F88AA0 /* XDActivityIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F3186AE17F57A9400F88AA0 /* XDActivityIndicatorView.h */; };
+		1F3186B117F57A9400F88AA0 /* XDActivityIndicatorView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F3186AF17F57A9400F88AA0 /* XDActivityIndicatorView.mm */; };
+		1F3186B217F57A9400F88AA0 /* XDActivityIndicatorView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F3186AF17F57A9400F88AA0 /* XDActivityIndicatorView.mm */; };
 		1FBDB17D17638B320089BE2E /* BKDownload.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FBDB17917638B320089BE2E /* BKDownload.h */; };
 		1FBDB17E17638B320089BE2E /* BKDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB17A17638B320089BE2E /* BKDownload.m */; };
 		1FBDB17F17638B320089BE2E /* BKDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBDB17A17638B320089BE2E /* BKDownload.m */; };
@@ -242,6 +245,8 @@
 		18F8C82715DE1127008EC39A /* TestToastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestToastViewController.h; sourceTree = "<group>"; };
 		18F8C82815DE1127008EC39A /* TestToastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestToastViewController.m; sourceTree = "<group>"; };
 		18F8C82915DE1128008EC39A /* TestToastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestToastViewController.xib; sourceTree = "<group>"; };
+		1F3186AE17F57A9400F88AA0 /* XDActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDActivityIndicatorView.h; sourceTree = "<group>"; };
+		1F3186AF17F57A9400F88AA0 /* XDActivityIndicatorView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = XDActivityIndicatorView.mm; sourceTree = "<group>"; };
 		1FBDB17917638B320089BE2E /* BKDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDownload.h; sourceTree = "<group>"; };
 		1FBDB17A17638B320089BE2E /* BKDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDownload.m; sourceTree = "<group>"; };
 		1FBDB17B17638B320089BE2E /* BKTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTimer.h; sourceTree = "<group>"; };
@@ -383,6 +388,8 @@
 				188B3EDA1616C12D00047164 /* XDBlueButton.m */,
 				18132FFF16D4A5FA00DE7EA0 /* XDGradientView.h */,
 				1813300016D4A5FA00DE7EA0 /* XDGradientView.m */,
+				1F3186AE17F57A9400F88AA0 /* XDActivityIndicatorView.h */,
+				1F3186AF17F57A9400F88AA0 /* XDActivityIndicatorView.mm */,
 				1854F2471604205300983250 /* Calendar */,
 			);
 			name = View;
@@ -594,6 +601,7 @@
 				1FBDB18A17638B6E0089BE2E /* NSObject+PropertyList.h in Headers */,
 				1FBDB18F17638B970089BE2E /* UITableDialog.h in Headers */,
 				1FBDB19417638BC20089BE2E /* UIDevice+Utils.h in Headers */,
+				1F3186B017F57A9400F88AA0 /* XDActivityIndicatorView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,6 +731,7 @@
 				1FBDB18C17638B6E0089BE2E /* NSObject+PropertyList.m in Sources */,
 				1FBDB19117638B970089BE2E /* UITableDialog.m in Sources */,
 				1FBDB19617638BC20089BE2E /* UIDevice+Utils.m in Sources */,
+				1F3186B217F57A9400F88AA0 /* XDActivityIndicatorView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +775,7 @@
 				1FBDB18B17638B6E0089BE2E /* NSObject+PropertyList.m in Sources */,
 				1FBDB19017638B970089BE2E /* UITableDialog.m in Sources */,
 				1FBDB19517638BC20089BE2E /* UIDevice+Utils.m in Sources */,
+				1F3186B117F57A9400F88AA0 /* XDActivityIndicatorView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

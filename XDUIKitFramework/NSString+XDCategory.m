@@ -224,7 +224,7 @@
 
 @implementation NSString (Utils)
 
-- (CGSize)wrapString:(CGFloat)width
+- (CGSize)wrapString:(float)width
             fontSize:(float)fontSize
            isDefault:(BOOL)isDefault
 {
@@ -233,7 +233,7 @@
     return size;
 }
 
-- (float)wrapStringHeight:(CGFloat)width
+- (float)wrapStringHeight:(float)width
                  fontSize:(float)fontSize
                 isDefault:(BOOL)isDefault
 {
