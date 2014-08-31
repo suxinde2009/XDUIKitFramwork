@@ -208,6 +208,9 @@
 		6FDB4BFF19B30AC5008D2225 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDB4BFE19B30AC5008D2225 /* libstdc++.dylib */; };
 		6FDB4C0119B30ACF008D2225 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDB4C0019B30ACF008D2225 /* CoreTelephony.framework */; };
 		6FDB4C0319B30AD9008D2225 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FDB4C0219B30AD9008D2225 /* Accelerate.framework */; };
+		6FDB4C0719B30F4B008D2225 /* SHXMLParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FDB4C0519B30F4B008D2225 /* SHXMLParser.h */; };
+		6FDB4C0819B30F4B008D2225 /* SHXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDB4C0619B30F4B008D2225 /* SHXMLParser.m */; };
+		6FDB4C0919B30F4B008D2225 /* SHXMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDB4C0619B30F4B008D2225 /* SHXMLParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -390,6 +393,8 @@
 		6FDB4BFE19B30AC5008D2225 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		6FDB4C0019B30ACF008D2225 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		6FDB4C0219B30AD9008D2225 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		6FDB4C0519B30F4B008D2225 /* SHXMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHXMLParser.h; sourceTree = "<group>"; };
+		6FDB4C0619B30F4B008D2225 /* SHXMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHXMLParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -647,6 +652,7 @@
 			children = (
 				6FDB4BBE19B3082C008D2225 /* FileUtils.h */,
 				6FDB4BBF19B3082C008D2225 /* FileUtils.m */,
+				6FDB4C0419B30F4B008D2225 /* SHXmlParser */,
 				6FDB4BC919B30961008D2225 /* ZipArchive */,
 				6FDB4BC319B30876008D2225 /* XDNetWorkStateMonitor */,
 				6FDB4B0619B305C3008D2225 /* Additions */,
@@ -788,6 +794,15 @@
 			path = minizip;
 			sourceTree = "<group>";
 		};
+		6FDB4C0419B30F4B008D2225 /* SHXmlParser */ = {
+			isa = PBXGroup;
+			children = (
+				6FDB4C0519B30F4B008D2225 /* SHXMLParser.h */,
+				6FDB4C0619B30F4B008D2225 /* SHXMLParser.m */,
+			);
+			path = SHXmlParser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -810,6 +825,7 @@
 				6FDB4BB219B305C3008D2225 /* XDMarkupStripper.h in Headers */,
 				6FDB4B4019B305C3008D2225 /* XDCalendarMonthView.h in Headers */,
 				6FDB4BC619B30876008D2225 /* XDNetWorkStateMonitor.h in Headers */,
+				6FDB4C0719B30F4B008D2225 /* SHXMLParser.h in Headers */,
 				6FDB4B9119B305C3008D2225 /* NSObject+XDCategory.h in Headers */,
 				6FDB4B5819B305C3008D2225 /* F3BarGauge.h in Headers */,
 				6FDB4B9A19B305C3008D2225 /* UIDevice+Utils.h in Headers */,
@@ -990,6 +1006,7 @@
 				6FDB4B7E19B305C3008D2225 /* NSArray+XDCategory.m in Sources */,
 				18F8C82A15DE1128008EC39A /* TestToastViewController.m in Sources */,
 				6FDB4BA519B305C3008D2225 /* XDDebug.m in Sources */,
+				6FDB4C0919B30F4B008D2225 /* SHXMLParser.m in Sources */,
 				6FDB4BD819B30961008D2225 /* ioapi.c in Sources */,
 				1880D2CD15DF9DEF0028BCBB /* TestAdditionsViewController.m in Sources */,
 				6FDB4BC819B30876008D2225 /* XDNetWorkStateMonitor.m in Sources */,
@@ -1048,6 +1065,7 @@
 				6FDB4B5F19B305C3008D2225 /* UITableDialog.m in Sources */,
 				6FDB4BB019B305C3008D2225 /* XDEntityTables.m in Sources */,
 				6FDB4B9819B305C3008D2225 /* NSString+XDCategory.m in Sources */,
+				6FDB4C0819B30F4B008D2225 /* SHXMLParser.m in Sources */,
 				6FDB4B9519B305C3008D2225 /* NSSqliteManager.m in Sources */,
 				6FDB4BE419B30961008D2225 /* ZipArchive.m in Sources */,
 				6FDB4B7119B305C3008D2225 /* XDGlossyButton.m in Sources */,
